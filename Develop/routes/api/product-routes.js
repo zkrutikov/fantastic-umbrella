@@ -10,11 +10,11 @@ router.get('/', (req, res) => {
   Product.findAll({
     include: [{
       model: Category,
-      attribures: ['id', 'category_name']
+      attributes: ['id', 'category_name']
     },
     {
       model: Tag,
-      attribures: ['id', 'tag_name']
+      attributes: ['id', 'tag_name']
     }]
   })
   .then((products)=> res.json(products))
@@ -128,6 +128,19 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
+  Product.destroy({
+    where: {id: req.params.id}
+  })
+  .then(product => {
+    if (!product) {
+      res.status(404).json({message: 'Product with this id can not be found!'});
+      return;
+    }
+    res.json(product);
+  })
+  .catch(err => {
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;
