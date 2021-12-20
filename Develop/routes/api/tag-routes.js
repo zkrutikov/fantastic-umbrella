@@ -18,8 +18,8 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Product data
   Tag.findOne({
     where: {id: req.params.id},
-    include: [ model: Product,
-    attributes: ['id', 'product_name', 'price', 'stock', 'category_id']]
+    include: [ {model: Product,
+    attributes: ['id', 'product_name', 'price', 'stock', 'category_id']}]
   })
   .then(tag => {
     if (!tag) {

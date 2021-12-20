@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
       attribures: ['id', 'category_name']
     },
     {
-      model: 'tag',
+      model: Tag,
       attribures: ['id', 'tag_name']
     }]
   })
