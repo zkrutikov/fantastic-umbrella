@@ -3,10 +3,10 @@
 ## Description
 This app is a backend for a e-commerce website.
 ## Table of contents
-*[Installation](#installation)
-*[Technologies](#technologies)
-*[License](#license)
-*[Contributors](#contributors)
+* [Installation](#installation)
+* [Technologies](#technologies)
+* [License](#license)
+* [Contributors](#contributors)
 
 ## Installation
 Navigate to the app folder and run 'npm install' in your terminal in order to install all the dependencies.
