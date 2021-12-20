@@ -1,13 +1,34 @@
 # E-commerce Back End Starter Code
 
-GIVEN a functional Express.js API
-WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-THEN I am able to connect to a database using Sequelize
-WHEN I enter schema and seed commands
-THEN a development database is created and is seeded with test data
-WHEN I enter the command to invoke the application
-THEN my server is started and the Sequelize models are synced to the MySQL database
-WHEN I open API GET routes in Insomnia for categories, products, or tags
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia
-THEN I am able to successfully create, update, and delete data in my database
+## Description
+This app is a backend for a e-commerce website.
+## Table of contents
+*[Installation] (#installation)
+*[Technologies] (#technologies)
+*[License] (#license)
+*[Contributors] (#contributors)
+
+## Installation
+Navigate to the app folder and run 'npm install' in your terminal in order to install all the dependencies.
+Run following commands in your terminal:
+```
+// establish database connection
+mysql -u <username> -p <password>
+SOURCE ./db/schema.sql;
+// seed your database
+npm run seed
+// start the application
+npm run start
+```
+## Technologies
+Node.js
+Express.js
+MySQL2
+Sequelize
+dotenv
+
+## License
+MIT
+
+## Contributors
+prepared by Zak Krutikov
